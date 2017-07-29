@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_plant_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context="freegrowsoftware.growtracker.AddPlantActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/add_image_wrapper"
+                android:layout_width="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="70dp">
+
+                <ImageButton
+                    android:id="@+id/add_image_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:onClick="addImage"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#0000"
+                    android:src="@drawable/add_image"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/plant_name_label"
+                android:layout_below="@+id/add_image_wrapper"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:ems="16"
+                android:text="Plant Name"
+                android:layout_width="match_parent" />
+
+            <EditText
+                android:id="@+id/plantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:ems="10"
+                android:layout_below="@+id/plant_name_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/date_started_label"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:ems="16"
+                android:text="Date Started"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/plantName" />
+
+            <LinearLayout
+                android:id="@+id/date_started_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/date_started_label">
+
+                <io.blackbox_vision.materialcalendarview.view.CalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:calendarCurrentDayTextColor="@color/black"
+                    app:calendarTitleTextColor="@color/black"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_plant_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="savePlant"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/date_started_wrapper"
+                android:enabled="true" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

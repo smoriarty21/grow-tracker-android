@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "freegrowsoftware.growtracker"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile('com.mikepenz:materialdrawer:5.9.4@aar') {
+        transitive = true
+    }
+    compile "com.mikepenz:iconics-core:2.8.9@aar"
+    compile "com.android.support:appcompat-v7:25.3.0"
+    compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
+    compile 'com.github.BlackBoxVision:material-calendar-view:v1.5.2'
+    compile 'com.afollestad:material-camera:0.4.4'
+}

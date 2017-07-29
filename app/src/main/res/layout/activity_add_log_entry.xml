@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_plant_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context="freegrowsoftware.growtracker.AddLogEntryActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/add_image_wrapper"
+                android:layout_width="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="70dp">
+
+                <ImageButton
+                    android:id="@+id/add_image_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:onClick="addImage"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#0000"
+                    android:src="@drawable/add_image"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/entry_description_label"
+                android:layout_below="@+id/add_image_wrapper"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:ems="16"
+                android:text="Description"
+                android:layout_width="match_parent" />
+
+            <EditText
+                android:id="@+id/entry_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:ems="10"
+                android:layout_below="@+id/entry_description_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/entry_notes_label"
+                android:layout_below="@+id/entry_description"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:ems="16"
+                android:text="Detailed Notes"
+                android:layout_width="match_parent" />
+
+            <EditText
+                android:id="@+id/entry_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:lines="7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:scrollHorizontally="false"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:ems="10"
+                android:layout_below="@+id/entry_notes_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:ems="16"
+                android:text="Date"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/entry_notes" />
+
+            <LinearLayout
+                android:id="@+id/date_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/date_label">
+
+                <io.blackbox_vision.materialcalendarview.view.CalendarView
+                    android:id="@+id/date_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:calendarCurrentDayTextColor="@color/black"
+                    app:calendarTitleTextColor="@color/black"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_entry_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="saveEntry"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/date_wrapper"
+                android:enabled="true" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

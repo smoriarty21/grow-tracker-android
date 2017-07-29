@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp"
+    android:weightSum="8">
+
+    <ImageView
+        android:id="@+id/entry_image"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:src="@drawable/add_image"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/log_info_date"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_weight="2"
+        android:gravity="center_vertical|center" />
+
+    <TextView
+        android:id="@+id/log_info_desc"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_weight="5"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 *.ap_
+!apk_builds/growtracker.apk
 
 # Files for the ART/Dalvik VM
 *.dex

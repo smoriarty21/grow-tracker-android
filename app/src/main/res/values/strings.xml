@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Grow Tracker</string>
+    <string name="add_plant_strain_title">Strain</string>
+</resources>
