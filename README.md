@@ -17,6 +17,8 @@ When you first load the app you will be brought to a blank plant list.  In the b
 # Questions / Suggestions
 If you have any questions or feedback email me at smoriarty21@gmail.com, I will try my best to help everyone and I am always listening to feedback.  If enough people ask for a feature I will make sure to get it added as quickly as possible.
 
-# Donte
-If you would like to donate to the code fuel find and assist me in making free software use the PayPal link below!
-paypal.me/atarimaster
+## Support Open Source Horticulture Software ##
+If you like what we do any would like to help support us check out the links below
+ 
+* [Patreon](https://www.patreon.com/hightek)
+* [PayPal](https://paypal.me/atarimaster)
